@@ -4,6 +4,7 @@
     <list default="true" id="d56b5353-26a6-499d-b98c-558ee0f5c7eb" name="Default" comment="" />
     <ignored path="zend.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
