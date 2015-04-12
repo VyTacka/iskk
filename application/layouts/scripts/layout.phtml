@@ -1,0 +1,36 @@
+<!-- application/layouts/scripts/layout.phtml -->
+<?php echo $this->doctype() ?>
+<html>
+<head>
+    <?php echo $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8'); ?>
+    <title>Puslapio pavadinimas</title>
+    <?php echo $this->headLink()->appendStylesheet($this->baseUrl() . '/stylesheets/style.css'); ?>
+    <?php echo $this->headScript()
+        ->prependFile($this->baseUrl() . '/javascripts/jquery-1.11.2.min.js')
+        ->appendFile($this->baseUrl() . '/javascripts/scripts.js'); ?>
+</head>
+<body>
+<div id="body">
+    <div id="header">
+        <h3 id="slogan">Naujienų svetainė</h3>
+    </div>
+    <div id="content">
+        <?php $this->navigation(new Zend_Navigation($this->customMenu())); ?>
+        <div id="topMenu">
+            <?php echo $this->navigation()->menu()->setMaxDepth(0); ?>
+        </div>
+        <div id="contentLeft">
+            <h2>Naujienos</h2>
+            <?php echo $this->navigation()->menu()->setMinDepth(1)->setMaxDepth(1); ?>
+        </div>
+        <div id="contentRight">
+            <div><?php echo $this->navigation()->breadcrumbs()->setMinDepth(0)  ; ?></div>
+            <?php echo $this->layout()->content ?>
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+</div>
+
+</body>
+</html>

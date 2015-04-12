@@ -1,0 +1,21 @@
+<?php
+$tableCategory = new Application_Model_Category_DbTable();
+?>
+
+<?php foreach ($this->paginator as $row): ?>
+
+    <div class="newsItem">
+        <p class="title"><a href="<?php echo $this->url(
+                array('controller' => 'post', 'action' => 'show', 'id' => $row->id)
+            ); ?>"><?php echo $this->escape($row->title); ?></a></p>
+
+        <p><?php echo $this->escape($row->createdAt); ?></p>
+
+        <p class="description"><?php echo mb_substr($this->escape($row->content), 0, 255), '...'; ?></p>
+    </div>
+
+<?php endforeach; ?>
+
+<?php echo $this->paginationControl($this->paginator,
+    'Sliding',
+    'pagination_control.phtml');

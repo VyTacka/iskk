@@ -1,0 +1,18 @@
+<div class="newsItem">
+    <h2 id="pageTitle"><?php echo $this->escape($this->post['title']); ?></h2>
+
+    <p><?php echo $this->escape($this->post['createdAt']); ?></p>
+
+    <p class="description"><?php echo nl2br($this->escape($this->post['content'])); ?></p>
+</div>
+
+<div class="newsComments">
+    <h2 id="commentsTitle">Komentarai</h2>
+    <?php foreach ($this->comments as $comment): ?>
+        <p class="commentAuthor"><?php echo $this->escape($comment['name']); ?></p>
+
+        <p><?php echo $this->escape($comment['createdAt']); ?></p>
+
+        <p class="description"><?php echo nl2br($this->escape($comment['content'])); ?></p>
+    <?php endforeach; ?>
+</div>

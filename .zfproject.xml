@@ -12,10 +12,33 @@
           <actionMethod actionName="index"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Page">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Category">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Comment">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Post">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
-      <layoutsDirectory enabled="false"/>
-      <modelsDirectory/>
+      <layoutsDirectory>
+        <layoutScriptsDirectory>
+          <layoutScriptFile layoutName="layout"/>
+        </layoutScriptsDirectory>
+      </layoutsDirectory>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Category"/>
+          <dbTableFile dbTableName="Comment"/>
+          <dbTableFile dbTableName="Page"/>
+          <dbTableFile dbTableName="Post"/>
+        </dbTableDirectory>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>
@@ -24,6 +47,18 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Error">
             <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Page">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Category">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Comment">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Post">
+            <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
